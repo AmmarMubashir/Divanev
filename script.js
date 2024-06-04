@@ -11,6 +11,36 @@ const hide1 = document.querySelector(".slides");
 
 //
 
+let currentSlide = 0;
+slideBtnRight.addEventListener("click", function () {
+  let rightEdge1 = slides[slides.length - 1].getBoundingClientRect().right;
+  let right1 = hide1.getBoundingClientRect().right;
+
+  console.log(right1, rightEdge1);
+
+  if (rightEdge1 < right1) return;
+  ++currentSlide;
+  console.log(currentSlide, slides.length);
+
+  slides.forEach((slide) => {
+    slide.style.transform = `translate(-${
+      (slide.offsetWidth / 2) * currentSlide
+    }px, 0%)`;
+  });
+});
+
+slideBtnLeft.addEventListener("click", function () {
+  if (currentSlide === 0) return;
+  --currentSlide;
+  console.log(currentSlide, slides.length);
+
+  slides.forEach((slide) => {
+    slide.style.transform = `translate(-${
+      (slide.offsetWidth / 2) * currentSlide
+    }px, 0%)`;
+  });
+});
+
 // .///////////////////////////////////////////
 function initComparisons() {
   var x, i;
@@ -106,3 +136,13 @@ if (window.innerWidth == 1850) {
 }
 
 console.log("hello sofa");
+
+const familyBtn = document.getElementById("familyButton");
+const overview = document.getElementsById("overview");
+
+console.log(familyBtn);
+console.log(overview);
+
+familyBtn.addEventListener("click", function () {
+  overview.classList.remove(".hidden");
+});

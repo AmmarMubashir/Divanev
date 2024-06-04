@@ -27,7 +27,7 @@
           <div class="col-lg-2 col-12">
             <div class="text-end">
               <svg
-                class=""
+                class="slideBtnLeft"
                 href="#firsatlerSlider"
                 role="button"
                 width="37"
@@ -44,7 +44,7 @@
                 />
               </svg>
               <svg
-                class=""
+                class="slideBtnRight"
                 class="bi bi-arrow-right-square"
                 href="#firsatlerSlider"
                 role="button"
@@ -278,6 +278,85 @@
             </div>
           </div>
         </div>
+
+        <!-- <div class="slides d-flex overflow-hidden" style="height: 400px">
+          <div class="slide slide_1 slide_v1">
+            <img
+              src="/img/slider1.png"
+              alt="slide image"
+              class="slide_img slide_1_img"
+            />
+            <h3 class="slideHeading">Ravel Yemek Odsai</h3>
+            <p class="slideText">Kasada %30 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_2 slide_v1">
+            <img
+              src="/img/slider2.png"
+              alt="slide image"
+              class="slide_img slide_2_img"
+            />
+            <h3 class="slideHeading">Ravel Köşe Takımı</h3>
+            <p class="slideText">Kasada %25 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_3 slide_v1">
+            <img
+              src="/img/slider3.png"
+              alt="slide image"
+              class="slide_img slide_3_img"
+            />
+            <h3 class="slideHeading">Eterna Koltuk Takımı</h3>
+            <p class="slideText">Kasada %20 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_4 slide_v1">
+            <img
+              src="/img/slider4.png"
+              alt="slide image"
+              class="slide_img slide_4_img"
+            />
+            <h3 class="slideHeading">Ravel Yemek Odsai</h3>
+            <p class="slideText">Kasada %30 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_5 slide_v1">
+            <img
+              src="/img/slider1.png"
+              alt="slide image"
+              class="slide_img slide_5_img"
+            />
+            <h3 class="slideHeading">Ravel Yatak Odası</h3>
+            <p class="slideText">Kasada %25 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_5 slide_v1">
+            <img
+              src="img/slider2.png"
+              alt="slide image"
+              class="slide_img slide_5_img"
+            />
+            <h3 class="slideHeading">Ravel Yemek Odsai</h3>
+            <p class="slideText">Kasada %30 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+
+          <div class="slide slide_5 slide_v1">
+            <img
+              src="/img/slider3.png"
+              alt="slide image"
+              class="slide_img slide_5_img"
+            />
+            <h3 class="slideHeading">Ravel Yemek Odsai</h3>
+            <p class="slideText">Kasada %30 indirim</p>
+            <button class="slideBtn">incele</button>
+          </div>
+        </div> -->
       </div>
     </div>
 
@@ -400,9 +479,18 @@
       <button
         class="btn btn-lg rounded-0 border-black px-3"
         style="position: absolute; top: 60%; left: 30px"
+        id="familyButton"
       >
         Videoyu İzle
       </button>
+
+      <div
+        class="position-absolute hidden"
+        style="top: 30px; left: 20%; height: 300px; width: 70%"
+        id="overview"
+      >
+        <video src="" controls style="width: 80%"></video>
+      </div>
     </div>
 
     <div class="container mt-3">
@@ -431,7 +519,7 @@
               <div
                 class="col-lg-2 col-md-5 col-12 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid1.png" alt="" class="gridImg" />
+                <img src="/img/grid1.png" alt="" class="gridImg hoverChange" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -442,7 +530,7 @@
               <div
                 class="col-lg-2 col-md-5 col-12 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid2.png" class="gridImg" alt="" />
+                <img src="/img/grid2.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -453,7 +541,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid3.png" class="gridImg" alt="" />
+                <img src="/img/grid3.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -464,7 +552,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid4.png" class="gridImg" alt="" />
+                <img src="/img/grid4.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -477,7 +565,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 h-40 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid5.png" alt="" class="gridImg" />
+                <img src="/img/grid5.png" alt="" class="gridImg hoverChange" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -488,7 +576,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid6.png" class="gridImg" alt="" />
+                <img src="/img/grid6.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -499,7 +587,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid7.png" class="gridImg" alt="" />
+                <img src="/img/grid7.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
@@ -510,7 +598,7 @@
               <div
                 class="col-lg-2 col-12 col-md-5 card d-flex flex-column justify-content-between align-items-center"
               >
-                <img src="/img/grid8.png" class="gridImg" alt="" />
+                <img src="/img/grid8.png" class="gridImg hoverChange" alt="" />
                 <p
                   class="text-secondary text-center mt-3"
                   style="font-size: 12px"
