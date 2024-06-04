@@ -12,6 +12,41 @@
       crossorigin="anonymous"
     />
     <script defer src="/script.js"></script>
+
+    <style>
+      @media (max-width: 768px) {
+        .carousel-inner .carousel-item > div {
+          display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+          display: block;
+        }
+      }
+
+      .carousel-inner .carousel-item.active,
+      .carousel-inner .carousel-item-next,
+      .carousel-inner .carousel-item-prev {
+        display: flex;
+      }
+
+      /* display 3 */
+      @media (min-width: 768px) {
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+          transform: translateX(33.333%);
+        }
+
+        .carousel-inner .carousel-item-left.active,
+        .carousel-inner .carousel-item-prev {
+          transform: translateX(-33.333%);
+        }
+      }
+
+      .carousel-inner .carousel-item-right,
+      .carousel-inner .carousel-item-left {
+        transform: translateX(0);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -25,30 +60,51 @@
             </p>
           </div>
           <div class="col-lg-2 col-12">
+            
             <div class="text-end">
-              <svg
-                class="slideBtnLeft"
-                href="#firsatlerSlider"
+              <a
+                class="w-auto"
+                href="#recipeCarousel"
                 role="button"
-                width="37"
-                height="32"
                 data-slide="prev"
-                viewBox="0 0 47 42"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <rect x="0.5" y="0.5" width="46" height="41" stroke="#747474" />
-                <path
-                  d="M16.414 20.707L15.707 20L15 20.707L15.707 21.414L16.414 20.707ZM21.707 14L15.707 20L17.121 21.414L23.121 15.414L21.707 14ZM15.707 21.414L21.707 27.414L23.121 26L17.121 20L15.707 21.414ZM16.414 21.707H31.414V19.707H16.414V21.707Z"
-                  fill="#747474"
-                />
-              </svg>
-              <svg
-                class="slideBtnRight"
-                class="bi bi-arrow-right-square"
-                href="#firsatlerSlider"
-                role="button"
-                data-slide="next"
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                </span>
+                <svg
+                  class="slideBtnLeft"
+                  href="#firsatlerSlider"
+                  role="button"
+                  width="37"
+                  height="32"
+                  data-slide="prev"
+                  viewBox="0 0 47 42"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="46"
+                    height="41"
+                    stroke="#747474"
+                  />
+                  <path
+                    d="M16.414 20.707L15.707 20L15 20.707L15.707 21.414L16.414 20.707ZM21.707 14L15.707 20L17.121 21.414L23.121 15.414L21.707 14ZM15.707 21.414L21.707 27.414L23.121 26L17.121 20L15.707 21.414ZM16.414 21.707H31.414V19.707H16.414V21.707Z"
+                    fill="#747474"
+                  />
+                </svg>
+              </a>
+              <a  class="w-auto"
+              href="#recipeCarousel"
+              role="button"
+              data-slide="next">
+
+                  <svg
+                  class="slideBtnRight"
+                  class="bi bi-arrow-right-square"
+                  href="#firsatlerSlider"
+                  role="button"
+                  data-slide="next"
                 width="37"
                 height="32"
                 viewBox="0 0 47 42"
@@ -57,15 +113,139 @@
               >
                 <rect x="0.5" y="0.5" width="46" height="41" stroke="#747474" />
                 <path
-                  d="M29.586 20.293L30.293 21L31 20.293L30.293 19.586L29.586 20.293ZM24.293 27L30.293 21L28.879 19.586L22.879 25.586L24.293 27ZM30.293 19.586L24.293 13.586L22.879 15L28.879 21L30.293 19.586ZM29.586 19.293L14.586 19.293L14.586 21.293L29.586 21.293L29.586 19.293Z"
-                  fill="#747474"
+                d="M29.586 20.293L30.293 21L31 20.293L30.293 19.586L29.586 20.293ZM24.293 27L30.293 21L28.879 19.586L22.879 25.586L24.293 27ZM30.293 19.586L24.293 13.586L22.879 15L28.879 21L30.293 19.586ZM29.586 19.293L14.586 19.293L14.586 21.293L29.586 21.293L29.586 19.293Z"
+                fill="#747474"
                 />
-              </svg>
+            </svg>
+        </a>
+              
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="container my-3">
+          <div class="row mx-auto my-auto">
+            <div
+              id="recipeCarousel"
+              class="carousel slide w-100"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider1.png"
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Eterna Koltuk Takımı</h5>
+                        <p class="text-1 text-secondary">Kasada %20 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider2.png"
+                          5
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Ravel Yemek Odası</h5>
+                        <p class="text-1 text-secondary">Kasada %30 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider3.png"
+                          5
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Ravel Yatak Odası</h5>
+                        <p class="text-1 text-secondary">Kasada %25 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider4.png"
+                          5
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Ravel Köşe Takımı</h5>
+                        <p class="text-1 text-secondary">Kasada %25 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider1.png"
+                          5
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Ravel Köşe Takımı</h5>
+                        <p class="text-1 text-secondary">Kasada %25 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 firslider">
+                        <img
+                          class="firItemImg"
+                          src="/img/slider2.png"
+                          5
+                          width="90%"
+                        />
+  
+                        <h5 class="text-2 mt-2 mb-0">Ravel Köşe Takımı</h5>
+                        <p class="text-1 text-secondary">Kasada %25 indirim</p>
+                        <button
+                          class="mt-2 btn btn-lg border-black bg-transparent rounded-0"
+                        >
+                          İncele
+                        </button>
+                      </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row mt-3">
           <div class="mb-4 justify-content-center">
             <div
               id="firsatlerSlider"
@@ -277,7 +457,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- <div class="slides d-flex overflow-hidden" style="height: 400px">
           <div class="slide slide_1 slide_v1">
@@ -939,6 +1119,27 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
 
     <script>
+      $("#recipeCarousel").carousel({
+        interval: 200000,
+      });
+
+      $(".carousel .carousel-item").each(function () {
+        var minPerSlide = 4;
+        var next = $(this).next();
+        if (!next.length) {
+          next = $(this).siblings(":first");
+        }
+        next.children(":first-child").clone().appendTo($(this));
+
+        for (var i = 0; i < minPerSlide; i++) {
+          next = next.next();
+          if (!next.length) {
+            next = $(this).siblings(":first");
+          }
+
+          next.children(":first-child").clone().appendTo($(this));
+        }
+      });
       $(document).ready(function () {
         // Disable automatic cycling
         $("#carouselExampleControls").carousel({
