@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  font-family: "Merriweather", serif;
+}
+
 .gridImg {
   width: 100%;
 }
@@ -27,7 +33,17 @@
   /* transform: scale(1.3); */
   content: url(/img/grid23.png);
 }
-
+.seveBoxItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.seveBox2 {
+  margin-top: 20px;
+}
+.bannerText {
+  font-size: 0.8rem;
+}
 /* //////////////////////////////////// */
 .img-comp-container {
   position: relative;
@@ -104,7 +120,7 @@
 
 .imgComparison {
   margin-top: 1rem;
-
+  font-size: 1.2rem;
   padding: 5rem 10rem;
 
   display: flex;
@@ -120,7 +136,7 @@
 
 .list {
   margin-top: 20px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 
   font-weight: 400;
 
@@ -133,7 +149,8 @@ span {
 
 .li {
   display: flex;
-  align-items: end;
+  margin-top: 7px;
+  /* align-items: end; */
 
   color: #9c9c9c;
 }
@@ -294,6 +311,28 @@ span {
   }
 }
 
+@media screen and (max-width: 1234px) {
+  .imgComparison {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    gap: 10rem;
+
+    /* padding: 4rem; */
+  }
+  .list {
+    font-size: 1.6rem;
+  }
+  .absolute {
+    position: relative;
+    left: -12rem;
+  }
+  .backText {
+    font-size: 16rem;
+    left: 30px;
+  }
+}
 @media screen and (max-width: 1140px) {
   /* html {
     font-size: 40%;
@@ -322,6 +361,26 @@ span {
     font-size: 30%;
   } */
 
+  .list {
+    font-size: 1.4rem;
+  }
+  .bannerText {
+    font-size: 1.2rem;
+  }
+  .seveBoxItem {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .seveBox1,
+  .seveBox2 {
+    width: 53%;
+  }
+
+  .seveBox2 {
+    margin-top: 90px !important;
+  }
   .backText {
     font-size: 10rem;
   }
@@ -385,6 +444,12 @@ span {
   }
 } */
 
+@media screen and (max-width: 768px) {
+  .list {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
 @media screen and (max-width: 700px) {
   .prototypesImgs {
     display: grid;
@@ -401,6 +466,13 @@ span {
 }
 
 @media screen and (max-width: 600px) {
+  .seveBox1,
+  .seveBox2 {
+    width: 80%;
+  }
+  .bannerText {
+    font-size: 1.4rem;
+  }
   .sofas {
     width: 450px !important;
     height: 225px !important;
@@ -482,6 +554,9 @@ span {
 .imgComparison {
   position: relative;
 }
+.list {
+  font-size: 14px;
+}
 
 /* body {
   overflow-x: hidden !important;
@@ -501,7 +576,7 @@ span {
 }
 @media screen and (max-width: 667px) {
   .gridImg {
-    width: 50%;
+    width: 70%;
     height: 70%;
   }
   .videoContent {
