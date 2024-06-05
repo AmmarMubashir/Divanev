@@ -44,6 +44,17 @@
 .bannerText {
   font-size: 0.8rem;
 }
+
+.gridBtn:hover {
+  background: #005850 !important;
+  color: white !important;
+  border: none !important;
+}
+#familyButton:hover {
+  background: black !important;
+  color: white !important;
+  border: none !important;
+}
 /* //////////////////////////////////// */
 .img-comp-container {
   position: relative;
